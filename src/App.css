@@ -66,7 +66,6 @@ body{
 .main h1{
   text-align: center;
   color:  white;
-  padding-top: 20px;
 }
 .mains{
   display: flex;
@@ -92,4 +91,21 @@ body{
   padding-top: 4px;
   padding-left: 4px;
   color: red;
+}
+.drops{
+  display: flex;
+  column-gap: 31px;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+.drops select{
+  padding: 5px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  border-color: white; 
+}
+.red{
+  background-color: black;
+  color: white;
 }
