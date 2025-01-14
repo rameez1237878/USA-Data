@@ -12,7 +12,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -38,6 +37,7 @@
 }
 
 /* data fetch styling */ 
+
 body{
   background-color: black;
 }
@@ -76,7 +76,6 @@ body{
   justify-content: center;
   padding: 20px 20px 20px 20px;
 }
-
 .card1{
   border : solid white 2px;
   display: flex;
