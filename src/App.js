@@ -7,6 +7,7 @@ import { useEffect, useState,  } from 'react';
   const [weData, setWeData] = useState([]);
   const [drilldown, setDrilldown] = useState('Nation');
   const [year, setYear] = useState('');
+
   const fetchData= async()=>{
     let url = `${process.env.REACT_APP_API}=${drilldown}&measures=Population&year=${year}`;
     let res = await axios.get(url);
@@ -24,7 +25,7 @@ import { useEffect, useState,  } from 'react';
     <div className='main'>
       <div className="drops">
       <div className='dropdown'>
-        <select name="" id="" value={drilldown} onChange={(e)=>setDrilldown(e.target.value)}>
+        <select name="" id="" value={drilldown}  onChange={(e)=>setDrilldown(e.target.value)}>
           <option className="red" value="Nation">Nation</option>
           <option className="red" value="State">State</option>
         </select>
@@ -48,11 +49,11 @@ import { useEffect, useState,  } from 'react';
       <h1>{process.env.REACT_APP_FIRSTQ}</h1>
     <div className='mains'>
       {myData.map((data, index)=>{
-          const {Nation, Population, Year} = data;
+          const {Nation, Population, Year, State} = data;
           return (
             <>
               <div className = 'card' key={index}>
-                 <div className='close'> <h3>{process.env.REACT_APP_NATION} </h3> <h4>{Nation}</h4> </div>
+                <div className='close'> <h3>{drilldown === "Nation" ? "Nation :" : "State :"}</h3> <h4>{Nation}{State}</h4> </div>
                  <div className='close'> <h3>{process.env.REACT_APP_YEAR} </h3> <h4>{Year}</h4> </div>
                  <div className='close'> <h3>{process.env.REACT_APP_POPULATION}</h3> <h4>{Population}</h4> </div>
               </div>
